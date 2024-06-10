@@ -81,7 +81,7 @@
                 <!-- Sidebar user panel (optional) --> 
                 <div class="user-panel mt-3 pb-3 mb-3 d-flex"> 
                     <div class="image"> 
-                        <img src="{{ asset('dist/img/user4-128x128.jpg')}}" class="img-circle 
+                        <img src="{{ asset('dist/img/user3-128x128.jpg')}}" class="img-circle 
 elevation-2" 
                             alt="User Image"> 
                     </div> 
