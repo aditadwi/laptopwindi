@@ -26,8 +26,8 @@
             
             <div class=" card-body">
                 <div class="form-group">
-                    <label for="nama">Nama Pelanggan</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="" value="{{$pelanggan->nama}}">
+                    <label for="name">Name Pelanggan</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="" value="{{$pelanggan->name}}">
                 </div>                
                 <div class="form-group">
                     <label for="hp">No HP</label>

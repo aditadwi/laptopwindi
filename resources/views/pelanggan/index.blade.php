@@ -8,15 +8,15 @@
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 @endsection
 
-@section('judulh1','Admin - pelanggan')
-@section('judulh3','pelanggans')
+@section('judulh1','Admin - Pelanggan')
+@section('judulh3','Pelanggans')
 @section('konten')
 
 <div class="col-md-4">
 
     <div class="card card-success">
         <div class="card-header">
-            <h3 class="card-title">Input pelanggan</h3>
+            <h3 class="card-title">Input Pelanggan</h3>
         </div>
         <!-- /.card-header -->
         <!-- form start -->
@@ -25,8 +25,8 @@
 
             <div class=" card-body">
                 <div class="form-group">
-                    <label for="nama">Nama pelanggan</label>
-                    <input type="text" class="form-control" id="nama" name="nama" placeholder="">
+                    <label for="name">Nama Pelanggan</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="">
                 </div>                
                 <div class="form-group">
                     <label for="hp">No HP</label>
@@ -50,7 +50,7 @@
 <div class="col-md-8">
     <div class="card card-info">
         <div class="card-header">
-            <h3 class="card-title">Data pelanggan</h3>
+            <h3 class="card-title">Data Pelanggan</h3>
         </div>
         <!-- /.card-header -->
 
@@ -59,7 +59,7 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
+                        <th>Name</th>
                         <th>No HP</th>
                         <th>Alamat</th>
                         <th>Aksi</th>
@@ -70,7 +70,7 @@
                     @foreach($data as $dt)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $dt->nama }}</td>
+                        <td>{{ $dt->name }}</td>
                         <td>{{ $dt->hp }}</td>
                         <td>{{ $dt->alamat }}</td>
                         <td>
@@ -78,7 +78,7 @@
                                 <a type="button" class="btn btn-warning" href="{{ route('pelanggan.edit',$dt->id) }}">
                                     <i class=" fas fa-edit"></i>
                                 </a>
-                                <a type="button" class="btn btn-success" href="{{ route('pembei.show',$dt->id) }}">
+                                <a type="button" class="btn btn-success" href="{{ route('pelanggan.show',$dt->id) }}">
                                     <i class=" fas fa-eye"></i>
                                 </a>
                             </div>

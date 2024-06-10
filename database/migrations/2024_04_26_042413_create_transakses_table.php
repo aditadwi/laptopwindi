@@ -35,19 +35,15 @@ Schema::table('transaksis',function(Blueprint $table){
         Schema::table('transaksis', function(Blueprint $table) {
             $table->dropForeign('transaksis_pelanggans_id_foreign');
         });
-
         Schema::table('transaksis', function(Blueprint $table) {
             $table->dropIndex('transaksis_pelanggans_id_foreign');
         });
-
         Schema::table('transaksis', function(Blueprint $table) {
             $table->dropForeign('transaksis_users_id_foreign');
         });
-
         Schema::table('transaksis', function(Blueprint $table) {
             $table->dropIndex('transaksis_users_id_foreign');
-        });
-              
+        });      
         Schema::dropIfExists('transaksis');
 
     }

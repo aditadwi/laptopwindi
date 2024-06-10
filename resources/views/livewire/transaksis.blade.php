@@ -1,4 +1,3 @@
-
 <div class="row">
     @if ($errors->any())
     <div class="alert alert-danger">
@@ -23,9 +22,9 @@
                             <td>{{ $data->invoice }}</td>
                         </tr>
                         <tr>
-                            <th>Customer</th>
+                            <th>Pelanggan</th>
                             <th>:</th>
-                            <td>{{ $data->customer->name}}</td>
+                            <td>{{ $data->pelanggan->name}}</td>
                         </tr>
                         <tr>
                             <th>Tanggal</th>
@@ -51,11 +50,11 @@
 
                         @csrf
                         <div class=" card-body">
-                            <input type="hidden" name="order_id" wire:model="order_id" value="{{ $data->id }}">
+                            <input type="hidden" name="transaksi_id" wire:model="transaksi_id" value="{{ $data->id }}">
 
                             <div class="form-group">
-                                <label for="product_id">Produk</label>
-                                <select class="form-control" wire:model="product_id" name="product_id">
+                                <label for="produk_id">Produk</label>
+                                <select class="form-control" wire:model="produk_id" name="produk_id">
                                     <option hidden>--Pilih Produk--</option>
                                     @foreach($dataProduk as $dt )
                                     <option value="{{ $dt->id }}">{{ $dt->name }}</option>
@@ -93,7 +92,7 @@
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Nama Produk</th>
+                                <th>Name Pelanggan</th>
                                 <th>Harga</th>
                                 <th>Jumlah</th>
                                 <th>Sub Total</th>
@@ -102,13 +101,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach($dataOrderDetail as $dt)
+                            @foreach($dataDetiltransaksi as $dt)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $dt->product->name }}</td>
-                                <td>@money($dt->price)</td>
+                                <td>{{ $dt->produk->name }}</td>
+                                <td>@money($dt->harga)</td>
                                 <td>{{ $dt->qty}}</td>
-                                <td>@money($dt->price * $dt->qty)</td>
+                                <td>@money($dt->harga * $dt->qty)</td>
                                 <td><button class="btn btn-sm btn-danger" wire:click="delete({{ $dt->id }})"><i class=" fas fa-trash"></i></a></td>
                             </tr>
                             @endforeach
@@ -153,8 +152,7 @@
                         </tr>
                     </table>
                    
-                    <button class="btn btn-lg btn-success" wire:click="receipt({{ $data->id}})">
-                    <i class="fas fa-print"></i>  Cetak</button>
+ <button class="btn btn-lg btn-success" wire:click="receipt({{ $data->id }})"><i class="fas fa-print"></i>  Cetak</button>
                  
                 </div>
             </div>

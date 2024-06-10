@@ -8,8 +8,8 @@
 <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 @endsection
 
-@section('judulh1','Admin - Users')
-@section('judulh3','Users')
+@section('judulh1','Admin - User')
+@section('judulh3','User')
 @section('konten')
 
 <div class="col-md-4">
@@ -40,14 +40,6 @@
                     <label for="password">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
-                <div class="form-group">
-                    <label for="hp">HP</label>
-                    <input type="text" class="form-control" id="hp" name="hp" placeholder=" no HP" required >
-                </div>
-                <div class="form-group">
-                    <label for="alamat">Alamat</label>
-                    <input type="text" class="form-control" id="alamat" name="alamat" placeholder=" Alamat" required >
-                </div>
             </div>
             <!-- /.card-body -->
 
@@ -72,9 +64,7 @@
                     <tr>
                         <th>No</th>
                         <th>Nama </th>
-                        <th>Email</th>                   
-                        <th>HP </th>
-                        <th>Alamat</th>                   
+                        <th>Email</th>                                   
                     </tr>
                 </thead>
                 <tbody>
@@ -84,8 +74,6 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $dt->name }}</td>
                         <td>{{ $dt->email }}</td>
-                        <td>{{ $dt->hp }}</td>
-                        <td>{{ $dt->alamat }}</td>
                     </tr>
 
                     @endforeach

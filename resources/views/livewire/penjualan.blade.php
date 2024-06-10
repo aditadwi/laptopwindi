@@ -1,4 +1,3 @@
-
 <div class="row">
 <div class="d-flex aligns-items-center justify-content-center">
 <div class="col-6">
@@ -23,9 +22,9 @@
             @csrf
             <div class=" card-body">
                 <div class="form-group">
-                    <label for="name">Customer</label>
-                    <select class="form-control" wire:model="customer_id">
-                        <option hidden>--Pilih Customer--</option>
+                    <label for="name">Pelanggan</label>
+                    <select class="form-control" wire:model="pelanggan_id">
+                        <option hidden>--Pilih Pelanggan--</option>
                         @foreach($data as $dt )
                         <option value="{{ $dt->id }}">{{ $dt->name }}</option>
                         @endforeach
@@ -41,6 +40,5 @@
             </div>
         </form>
     </div>
-</div>
 </div>
 </div>
