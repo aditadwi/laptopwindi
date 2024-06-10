@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="{{ asset('plugins/icheck-bootstrap/icheckbootstrap.min.css') }}"> 
   <!-- Theme style --> 
   <link rel="stylesheet" href="{{ asset('dist/css/adminlte.min.css') }}"> </head> 
-<body class="hold-transition login-page" style="background-image: url('pp.jpg'); background- with:1.500% hight:700% : cover"> 
+<body class="hold-transition login-page" style="background-image: url('molo.jpg'); background- with:1.500% hight:700% : cover"> 
 <div class="login-box"> 
   <!-- /.login-logo --> 
   <div class="card card-outline card-primary"> 
